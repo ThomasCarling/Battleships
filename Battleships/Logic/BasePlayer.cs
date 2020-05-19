@@ -60,6 +60,9 @@ namespace Battleships.Logic
 
         #region Public Methods
 
+        /// <summary>
+        /// Called when this player should move.
+        /// </summary>
         public void Move() => AttackEnemy(this, 
             new CoordinateEventArgs(GetAttemptCoordinates()));
 
@@ -76,7 +79,16 @@ namespace Battleships.Logic
             myShip?.Hit(arg.Coordinates);
         }
 
+        /// <summary>
+        /// Called when this player has hit another player.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="args"></param>
         public abstract void OnHit(Object source, CoordinateEventArgs args);
+
+        /// <summary>
+        /// Called when this player has won the game.
+        /// </summary>
         public abstract void OnVictory(Object source, EventArgs args);
 
         #endregion

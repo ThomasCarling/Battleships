@@ -41,6 +41,10 @@ namespace Battleships.Logic
             SetEvents();
         }
 
+        /// <summary>
+        /// Method that causes each player to take their turn
+        /// in order, until one of them has won.
+        /// </summary>
         public void PlayGame(bool startWithPlayerOne)
         {
             if (startWithPlayerOne)
@@ -54,6 +58,10 @@ namespace Battleships.Logic
             }
         }
 
+        /// <summary>
+        /// Private helper to assign methods to each player's
+        /// events.
+        /// </summary>
         private void SetEvents()
         {
             _playerOne.AttackEnemy += _playerTwo.OnAttack;

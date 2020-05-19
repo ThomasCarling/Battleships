@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Battleships.Logic
 {
+
+    /// <summary>
+    /// Interface encapsulating the behaviour of a ship, from the
+    /// perspective of a player.
+    /// </summary>
     public interface IShip
     {
 
